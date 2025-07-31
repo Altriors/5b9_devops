@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>5b9registration from </title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+        }
+        .form_container{
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-sizing: 0 0 10px rgba(0 0 0 0.1);
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .inputbox{
+            margin-bottom: 15px;
+        }
+        .inputbox label{
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .inputbox input{
+            width: 1000px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-sizing: border-box;
+            outline: none;
+            transition: background-color 0.35 ease;
+        }
+        .inputbox input:focus{
+            border-color: #007bff;
+        }
+        .submit_btn{
+            width: 100px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.35 ease;
+        }
+        .submit_btn:hover{
+            background-color: #0056b3;
+        }
+        .successmsg{
+            display: none;
+            text-align: center;
+            color: green;
+            margin-top: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form id="regform">
+            <h1> Event form 23261A05B9</h1>
+            <div class="inputbox">
+                <label for="fname"> First name </label>
+                <input type="text" id="fname" name="fname" required>
+            </div>
+            <div class="inputbox">
+                <label for="lname"> Last name </label>
+                <input type="text" id="lname" name="lname" required>
+            </div>
+            <div class="inputbox">
+                <label for="email"> Email </label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="inputbox">
+                <label for="phno"> Phone number </label>
+                <input type="text" id="text" name="text"  required>
+            </div>
+            <button type="submit" class="submit_btn">Register</button>
+            <div class="successmsg" id="successmsg">Thank You For registration</div>
+        </form>
+    </div>
+    <script>
+        const form= document.getElementById("regform");
+        const successmsg=document.getElementById("successmsg");
+        form.addEventListener("submit",function(event){
+            event.preventDefault();
+            successmsg.style.display="block";
+            form.reset();
+
+        });
+    </script>
+</body>
+</html>
