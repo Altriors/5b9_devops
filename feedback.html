@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .feedbackform {
+            width: 400px;
+            background-color: antiquewhite;
+            border: 3px solid black;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .box {
+            margin-bottom: 20px;
+        }
+
+        .submitbtn {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: aliceblue;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid black;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Change "action" to your backend endpoint -->
+    <form id="feedbackform" class="feedbackform" method="POST" action="/feedback">
+        
+        <div class="box">
+            <label for="name">Name</label><br><br>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="box">
+            <label for="email">Email</label><br><br>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="box">
+            <label for="message">Message</label><br><br>
+            <textarea id="message" name="message" placeholder="Tell us about your experience" required></textarea>
+        </div>
+
+        <button type="submit" class="submitbtn">Submit</button>
+    </form>
+
+</body>
+</html>
